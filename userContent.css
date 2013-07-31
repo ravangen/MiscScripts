@@ -1,0 +1,26 @@
+@-moz-document domain(facebook.com) {
+div#pagelet_ego_pane_w,
+div.ego_section,
+div#pagelet_canvas_nav_content,
+div#pagelet_canvas_storybox {
+    display: none!important;
+}
+}
+
+@-moz-document domain(mail.google.com) {
+div#gbx3 {
+    display: none !important;
+}
+ol#gbzc li.gbt:nth-child(1),
+ol#gbzc li.gbt:nth-child(5),
+ol#gbzc li.gbt:nth-child(7),
+ol#gbzc li.gbt:nth-child(11) {
+    display: none !important;
+}
+}
+
+@-moz-document domain(mousehuntgame.com) {
+div.groupad {
+    display: none !important;
+}
+}
