@@ -3,7 +3,7 @@ MiscScripts
 
 ## Podbay Show Downloader ##
 
-A [guide](PodbayDownloader) to download a collection of media content related to a [Podbay](http://podbay.fm) show using an rss feed.
+A [guide](PodbayDownloader) to download a collection of media content related to a [Podbay](http://podbay.fm) show using a rss feed.
 
 ## Login Background Changer ##
 

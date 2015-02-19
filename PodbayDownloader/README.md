@@ -10,12 +10,12 @@ Install additional required packages: `pip install -r requirements.txt`
 
 ### Parameters ###
 * `-f`, `--feed` : Url of a rss feed for the show
-* `-t`, `--type` : File type of content to be downloaded (default: `audio/mpeg`)
-* `-p`, `--path` : Filesystem path to save content to (default: current directory)
 * `-n`, `--num` : Number of recent items to download (default: all)
+* `-p`, `--path` : Filesystem path to save content to (default: current directory)
+* `-t`, `--type` : File type of content to be downloaded (default: `audio/mpeg`)
 
 ### Sample Usage ###
-Download content from [TED Radio Hour](http://podbay.fm/show/523121474) using its [RSS feed](http://podbay.fm/show/523121474).
+Download content from [TED Radio Hour](http://podbay.fm/show/523121474) using its RSS feed [http://www.npr.org/rss/podcast.php?id=510298](http://www.npr.org/rss/podcast.php?id=510298).
 
 1. Download all content. `python download.py -f http://www.npr.org/rss/podcast.php?id=510298`
 1. Download latest 2 content items. `python download.py -f http://www.npr.org/rss/podcast.php?id=510298 -n 2`
