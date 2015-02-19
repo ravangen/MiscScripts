@@ -1,10 +1,10 @@
+import argparse
 import os
 import string
 import sys
 import urllib
 import urlparse
 
-import argparse
 import feedparser
 
 
@@ -19,7 +19,7 @@ def print_error(message):
 def parse_args():
     parser = argparse.ArgumentParser(description='Download all media files from a show.')
     parser.add_argument('-f', '--feed', dest='feed', help='RSS feed of podcast')
-    parser.add_argument('-n', '--num', dest='num', help='Number of recent items to download')
+    parser.add_argument('-n', '--num', dest='num', type=int, help='Number of recent items to download')
     parser.add_argument('-p', '--path', dest='path', default=os.getcwd(), help='Filesystem path to save content')
     parser.add_argument('-t', '--type', dest='type', default='audio/mpeg', help='File type to be downloaded')
 
@@ -77,7 +77,7 @@ def download_from_feed(feed, type, path=None, max_count=None):
     max_count -- how many recent items from feed should be downloaded (default: all)
     """
     directory = path or os.getcwd()
-    if not os.path.isdir(directory):
+    if not os.path.exists(directory) or not os.path.isdir(directory):
         raise Exception('Path \'{}\' is not a directory'.format(directory))
 
     try:
